@@ -19,7 +19,7 @@ La aplicación será una guia de todas las rutas
     
 2. Run the container
 
-    `docker run --name climbingguide_postgres -p 5432:5432 -d --rm climbingguide_db`
+    `docker run --name climbingguide_postgres -p 5432:5432 -d climbingguide_db`
     
 3. Verify if the container is running
 
@@ -40,4 +40,8 @@ La aplicación será una guia de todas las rutas
 7. If you want to stop your container:
 
     `docker stop climbingguide_postgres`
+    
+8. If you want to restart the container:
+        
+     `docker restart climbingguide_postgres`
 
