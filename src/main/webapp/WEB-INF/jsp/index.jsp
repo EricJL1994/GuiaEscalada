@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h1>Hello world!</h1>
-    <a href="/climbers">Button</a>
+    <h1>Hello climbers!</h1>
+    <a href="/climbers">Climbers</a>
 </body>
 </html>
