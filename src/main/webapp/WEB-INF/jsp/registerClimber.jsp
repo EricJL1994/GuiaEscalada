@@ -1,18 +1,40 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Register a Climber</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <title>Register a climber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="css/flat-admin.css">
 </head>
-
 <body>
-    <h1>Register a Climber</h1>
-<form action="/climber" method="post">
-    <label>Name:
-        <input type="text" name="name">
-    </label>
-    <button type="submit">Register</button>
-</form>
+<div class="app app-default">
+    <div class="app-container app-login">
+        <div class="flex-center">
+            <div class="app-header"></div>
+            <div class="app-body">
+                <div class="app-block">
+                    <div class="app-form">
+                        <div class="form-suggestion">
+                            Register a new climber.
+                        </div>
+                        <form action="/climbers" method="POST">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <input type="text" name="name" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-success btn-submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="app-footer">
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
