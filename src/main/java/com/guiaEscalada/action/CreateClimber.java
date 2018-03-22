@@ -2,17 +2,19 @@ package com.guiaEscalada.action;
 
 import com.guiaEscalada.infrastructure.ClimberRepository;
 import com.guiaEscalada.model.Climber;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("CreateClimberService")
 public class CreateClimber {
-    private Climber climber;
-    private ClimberRepository climberRepository;
+    private final ClimberRepository climberRepository;
 
-    public CreateClimber(Climber climber, ClimberRepository climberRepository) {
-        this.climber = climber;
+    @Autowired
+    public CreateClimber(ClimberRepository climberRepository) {
         this.climberRepository = climberRepository;
     }
 
-    public void execute(){
+    public void execute(Climber climber){
         climberRepository.saveAndFlush(climber);
     }
 }

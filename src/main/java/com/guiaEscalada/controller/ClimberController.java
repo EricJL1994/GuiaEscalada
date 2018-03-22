@@ -6,10 +6,7 @@ import com.guiaEscalada.model.Climber;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -27,13 +24,20 @@ public class ClimberController {
 
 
     @RequestMapping(path = "/climbers", method = POST)
-    @ResponseStatus(code = CREATED)
-    public void createClimber(@ModelAttribute Climber climber) {
-        new CreateClimber(climber, climberRepository).execute();
+//    @ResponseStatus(code = CREATED)
+    public String createClimber(@ModelAttribute Climber climber) {
+        new CreateClimber(climberRepository).execute(climber);
+        return "redirect:/climber?id=" + climber.getId();
     }
     @RequestMapping(path = "/climbers", method = GET)
     public String createClimber() {
         return "registerClimber";
+    }
+
+    @RequestMapping(path = "/climber", method = GET)
+    public String createClimber(@RequestParam("id")int climberId, Model model){
+        model.addAttribute("climber", climberRepository.getOne((long) climberId));
+        return "climberProfile";
     }
 
 
