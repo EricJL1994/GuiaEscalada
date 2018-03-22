@@ -6,6 +6,6 @@
 </head>
 <body>
     <h1>Hello climbers!</h1>
-    <a href="/climbers">Climbers</a>
+    <a href="/climber">Climbers</a>
 </body>
 </html>
