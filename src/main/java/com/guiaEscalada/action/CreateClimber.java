@@ -4,15 +4,13 @@ import com.guiaEscalada.infrastructure.ClimberRepository;
 import com.guiaEscalada.model.Climber;
 
 public class CreateClimber {
-    private Climber climber;
     private ClimberRepository climberRepository;
 
-    public CreateClimber(Climber climber, ClimberRepository climberRepository) {
-        this.climber = climber;
+    public CreateClimber(ClimberRepository climberRepository) {
         this.climberRepository = climberRepository;
     }
 
-    public void execute(){
+    public void execute(Climber climber){
         climberRepository.saveAndFlush(climber);
     }
 }

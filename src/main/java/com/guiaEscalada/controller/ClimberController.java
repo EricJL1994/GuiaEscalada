@@ -29,7 +29,7 @@ public class ClimberController {
     @RequestMapping(path = "/climbers", method = POST)
     @ResponseStatus(code = CREATED)
     public void createClimber(@ModelAttribute Climber climber) {
-        new CreateClimber(climber, climberRepository).execute();
+        new CreateClimber(climberRepository).execute(climber);
     }
     @RequestMapping(path = "/climbers", method = GET)
     public String createClimber() {

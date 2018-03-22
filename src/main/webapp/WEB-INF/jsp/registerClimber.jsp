@@ -20,15 +20,15 @@
                         <form action="/climbers" method="POST">
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" name="name" class="form-control" placeholder="Name">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon2">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
                             </div>
                             <div class="text-center">
                                 <input type="submit" class="btn btn-success btn-submit" value="Register">
