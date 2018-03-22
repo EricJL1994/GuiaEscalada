@@ -12,6 +12,10 @@ public class Climber {
     private String name;
     private String password;
 
+    public long getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
