@@ -24,6 +24,12 @@
                                 </span>
                                 <input type="text" name="name" class="form-control" placeholder="Name">
                             </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                            </div>
                             <div class="text-center">
                                 <input type="submit" class="btn btn-success btn-submit" value="Register">
                             </div>
