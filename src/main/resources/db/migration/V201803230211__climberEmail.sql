@@ -1,0 +1,1 @@
+ALTER TABLE public.climbers ADD COLUMN email TEXT NOT NULL;
