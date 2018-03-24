@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 //@RestController("helloController")
 @Controller("helloController")
-public class HelloController {
+public class IndexController {
 
     @RequestMapping(path = "/", method = GET)
     //@ResponseBody
