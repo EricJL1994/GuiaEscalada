@@ -30,8 +30,7 @@ public class ClimberController {
 //    @ResponseStatus(code = CREATED)
     public String registerClimber(@ModelAttribute Climber climber) {
         new CreateClimber(climberRepository).execute(climber);
-        return "redirect:/climber?id=" + climber.getId();
-        //TODO redirect to login
+        return "redirect:/login";
     }
 
     @RequestMapping(path = "/climbers", method = GET)

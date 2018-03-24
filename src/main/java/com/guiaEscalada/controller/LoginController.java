@@ -30,7 +30,10 @@ public class LoginController {
     public String Login(HttpSession httpSession,
                         @RequestParam(value = "email") String email,
                         @RequestParam(value = "password") String password) {
-        if (new Login(climberRepository).execute(httpSession, email, password)) return "redirect:/";
+        if (new Login(climberRepository).execute(httpSession, email, password)){
+            long id = climberRepository.findByEmail(email).getId();
+            return "redirect:/climber?id=" + id;
+        }
         return "login";
     }
 }
